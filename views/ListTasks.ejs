@@ -1,0 +1,12 @@
+<h1>Todo list</h1>
+<ul>
+    <% for(tache of taches) { %>
+        <li>
+            <%= tache.nom_tache %> - <a href="/delete/<%= tache.tache_id %>">Delete</a>
+        </li>
+        <% } %>
+</ul>
+<form action="/add" method="POST">
+    <input name="tache" />
+    <input type="submit" value="Poster" />
+</form>
